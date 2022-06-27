@@ -64,6 +64,11 @@ app.post('/visitor-sign-out', async (req, res) => {
   res.send({ goodbye });
 });
 
+app.get('/visitors', (req, res) => {
+   res.send('hello!')
+
+})
+
 app.use(errorMiddleware());
 
 const listener = app.listen(process.env.PORT || 0, () => {
