@@ -68,10 +68,10 @@ app.get('/visitors', (req, res) => {
 //  const envoy = req.envoy; // our middleware adds an "envoy" object to req.
 //  const job = envoy.job;
 //  const hello = envoy.meta.config.HELLO;
-    const envoy = req.envoy;
-    const job = envoy.job;
-    const meta = envoy.meta
-    res.send(envoy)
+//    const envoy = req.envoy;
+//    const job = envoy.job;
+//    const meta = envoy.meta
+    res.send(req)
 
 })
 
