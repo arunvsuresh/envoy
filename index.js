@@ -65,7 +65,12 @@ app.post('/visitor-sign-out', async (req, res) => {
 });
 
 app.get('/visitors', (req, res) => {
-   res.send('hello!')
+  const envoy = req.envoy; // our middleware adds an "envoy" object to req.
+  const job = envoy.job;
+  const hello = envoy.meta.config.HELLO;
+  console.log('hello')
+  console.log(hello)
+  res.send('hello!')
 
 })
 
